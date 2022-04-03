@@ -1,0 +1,6 @@
+.dualHeader {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: var(--padding);
+  gap: var(--padding);
+}

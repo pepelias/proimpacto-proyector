@@ -1,0 +1,137 @@
+@font-face {
+  font-family: 'DM Sans';
+  src: url(/fonts/DMSans-Regular.ttf);
+}
+@font-face {
+  font-family: 'DM Sans';
+  src: url(/fonts/DMSans-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'DM Sans';
+  src: url(/fonts/DMSans-Italic.ttf);
+  font-style: italic;
+}
+@font-face {
+  font-family: 'DM Sans';
+  src: url(/fonts/DMSans-BoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+:root {
+  --color-grey: #f1f4f6;
+  --color-black: #162226;
+  --color-black--alt: #1b232a;
+  --color-input: #161c22;
+  --color-text: #fff;
+  --color-comment: #a7afb7;
+  --color-disabled: #3e474f;
+  --color-border: #7b61ff;
+  --color-primary: #5ed5a8;
+  --color-primary--alt: #8affd2;
+  --color-secondary: #dd4b4b;
+  --color-secondary--alt: #ff7070;
+  --color-green: var(--color-primary);
+  --color-green--alt: var(--color-primary--alt);
+  --color-red: var(--color-secondary);
+  --color-red--alt: var(--color-secondary--alt);
+
+  /* Box Model */
+  --padding: 10px;
+  --padding-1_5: 15px;
+  --padding-2: 20px;
+  --padding-05: 5px;
+  --margin: 20px;
+  --radius: 8px;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  font-family: 'DM Sans';
+}
+body {
+  margin: 0;
+  background-color: var(--color-black);
+  color: var(--color-text);
+}
+
+/* Botones */
+button,
+.button {
+  display: block;
+  padding: var(--padding) var(--padding-2);
+  background: var(--color-primary);
+  color: var(--color-black);
+  border: 0;
+  border-radius: var(--radius);
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+button:hover,
+.button:hover {
+  background: var(--color-primary--alt);
+}
+
+button.outlined,
+.button.outlined,
+button.toggle,
+.button.toggle {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+button.outlined:hover,
+.button.outlined:hover {
+  border-color: var(--color-primary--alt);
+  color: var(--color-primary--alt);
+}
+
+button.toggle {
+  color: var(--color-comment);
+  border-color: var(--color-comment);
+}
+
+button.tab,
+.button.tab {
+  border: 0;
+  color: var(--color-comment);
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  background: transparent;
+}
+button.tab:hover,
+.button.tab:hover,
+button.toggle:hover,
+.button.toggle:hover {
+  color: var(--color-grey);
+}
+button.tab.active,
+.button.tab.active,
+button.toggle.active,
+.button.toggle.active {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+input,
+select,
+textarea,
+option {
+  display: block;
+  width: 100%;
+  padding: var(--padding-1_5) var(--padding);
+  border-radius: var(--radius);
+  background-color: var(--color-input);
+  border: 1px solid transparent;
+  outline: 0;
+  box-shadow: var(--shadow);
+  color: var(--color-text);
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-primary);
+}

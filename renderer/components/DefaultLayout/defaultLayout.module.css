@@ -1,0 +1,35 @@
+.defaultLayout {
+  display: grid;
+  grid-template-rows: auto 1fr auto ;
+  height: 100vh;
+  width: 100vw;
+}
+.mainContainer {
+  display: grid;
+  grid-template-columns: 30% 1fr 400px;
+  grid-template-rows: 40% 1fr;
+  grid-template-areas: 'favorites feature live'
+  'backgrounds feature live';
+  gap: var(--padding);
+  padding: var(--padding) 0;
+}
+.favorites {
+  grid-area: favorites;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.featureContainer {
+  grid-area: feature;
+  border-radius: var(--radius);
+}
+.controlContainer {
+  grid-area: live;
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+.backgroundsContainer {
+  grid-area: backgrounds;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.favorites, .featureContainer, .controlContainer, .backgroundsContainer {
+  background: var(--color-black--alt)
+}
